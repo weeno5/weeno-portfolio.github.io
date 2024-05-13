@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weeno's Porfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sunburst.css">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+</head>
+<body>
+
+<header>
+    <h1>Hi! This is Weeno's Portfolio!</h1>
+</header>
+
+<div class="tab">
+    <button class="tablinks active" onclick="opentab(event, '1')">Introduction</button>
+    <button class="tablinks" onclick="opentab(event, '2')">Programming</button>
+    <button class="tablinks" onclick="opentab(event, '3')">Data Entry</button>
+    <button class="tablinks" onclick="opentab(event, '4')">Roblox</button>
+</div>
+
+<div class="container">
+    <div id='1' class="tabcontent" style="display: block;">
+
+        <h1>Introduction</h1>
+        <p style="font-size: large; font-weight: bold;">Personal Statement : <span style="font-size: medium; font-weight: 400;">I have high ambitions to developing my IT programming skills and will do that through serving you at an affordable price!</span></p>
+        <p style="font-size: large; font-weight: bold;">Age : <span style="font-size: medium; font-weight: 400;">16</span></p>
+        <p style="font-size: large; font-weight: bold;">Education : </p>
+        <p style="font-size: medium; font-weight: 400;">Currently studying AS level</p>
+        <p style="font-size: medium; font-weight: 400;">IGCSE Computer Science 0478 Grade Results : <span style="font-weight: bold;">A  (3.8 GPA)</span></p>
+        <p style="font-size: large; font-weight: bold;">Country : <span style="font-size: medium; font-weight: 400;">Thailand</span></p>
+        <p style="font-size: large; font-weight: bold;">Contact me here : <span style="font-size: medium; font-weight: 400;">wonsri3@gmail.com</span></p>
+
+    </div>
+
+    <div id='2' class="tabcontent" >
+        <h1>Programming Projects</h1>
+
+        <div class="portfolio-item">
+            <h2>BlackJack in Python</h2>
+            <p style="font-size: medium;">Python Code for BlackJack Text Version</p>
+            <p style="font-size: medium;">Code snippet :</p>
+            <pre class="prettyprint"><code>
+# Function for bruteforcing in a chronological order
+def chronological(combination):
+    
+    num = 0
+    
+    while num != combination:
+        print (num)
+        num+=1
+    
+    print ("Combination is found :", combination)
+    
+    with open ("result.txt","a") as f:
+        strnum = str(combination)
+        f.write("Chr : ")
+        f.write(strnum)
+        f.write("\n")
+                    </code></pre>
+                <p>
+                    View full code here : <a href="https://github.com/weeno5/BlackJack" target="_blank">Github - BlackJack</a>
+                </p>
+        </div>
+
+
+        <div class="portfolio-item">
+            <h2>Combination Bruteforce</h2>
+            <p style="font-size: medium;">This Python code experiments whether it is more optimal to bruteforce a four-digit combination in chronological order or in a random order.</p>
+            <p style="font-size: medium;">Code snippet :</p>
+            <pre class="prettyprint"><code>
+# Function for bruteforcing in a chronological order
+def chronological(combination):
+    
+    num = 0
+    
+    while num != combination:
+        print (num)
+        num+=1
+    
+    print ("Combination is found :", combination)
+    
+    with open ("result.txt","a") as f:
+        strnum = str(combination)
+        f.write("Chr : ")
+        f.write(strnum)
+        f.write("\n")
+                    </code></pre>
+                <p>
+                    View full code here : <a href="https://github.com/weeno5/Combination-Bruteforce" target="_blank">Github - Combination Bruteforce</a>
+                </p>
+        </div>
+
+    </div>
+
+    <div id='3' class="tabcontent" >
+        <h1>Data Entry</h1>
+        <div class="portfolio-item">
+            <h2>Data Cleaning Excel</h2>
+            <p style="font-size: medium;">This code is for cleaning data in an excel file for a research project on student's mental health. The Excel file is private.</p>
+            <p style="font-size: medium;">The excel file had inconsistent data with varying strings that describes the same word. For example, the data that describes the issue with a student may be "ANXIOUS", whereas in another row, another student has the issue "anxiety". These two different words describe the same issue but the computer does not understand that. To make meaningful calculations and analysis, we must clean the data first.</p>
+            <p style="font-size: medium;">Code snippet :</p>
+            <pre class="prettyprint"><code>
+# Function for data cleaning a collumn
+def clean(code):
+    
+    # Create an array to match with the data cleaned collumn
+    # If the data in a row has been changed/cleaned
+    # The array will append with a True statement showing
+    # it has been cleaned/changed
+    # If it was not changed then it will give out a False statement
+    # Unchanged data indicates theres data that has not been cleaned
+    change=[] 
+    
+    # Iterate through all rows
+    for i in range(len(code)):
+        change.append(False)
+        for j,keywordSubList in enumerate(keywordList): # Iterate through the keywords to see if theres any match
+            for keyword in keywordSubList:
+                if keyword in (str(code[i])).upper():
+                    code[i]=codeRenew[j]
+                    change[len(change)-1]=True # Change has been made
+                    break
+    return change
+                </code></pre>
+                <p>
+                    View full code here : <a href="https://github.com/weeno5/Data-Cleaning-Excel" target="_blank">Github - Data Cleaning Excel</a>
+                </p>
+        </div>
+    </div>
+
+    <div id='4' class="tabcontent" >
+        <h1>ROBLOX!</h1>
+        <p style="font-size: medium;">Roblox is one of my favourite game platforms to where I have been a user ever since 2014.</p>
+        <p style="font-size: large; font-weight: bold;">My ROBLOX Profile : <a href="https://www.roblox.com/users/162627225/profile" style="font-size: medium; font-weight: 400;">Greninja1230</a></p>
+        <div class="portfolio-item">
+            <h2>Gamsay's Mansion</h2>
+            <p>Made in June 2021</p>
+            <img src="gamsay.png" class="center">
+            <p style="font-size: medium;">Gamsay's Mansion is a Roblox Brickbattle fighting game between two teams.</p>
+            <p style="font-size: medium;">Created for a map building competition for the Roblox Group : Temple of Brickbattle</p>
+            <a href="https://www.roblox.com/games/7015093042/Gamsays-Mansion">See : Gamsay's Mansion</a>
+        </div>
+
+        <div class="portfolio-item" >
+            <h2>Your Next Stop</h2>
+            <p>Made in April 2021</p>
+            <img src="yns.png" class="center">
+            <p style="font-size: medium;">Your Next Stop is a small experimental map showcase with a story concept.</p>
+            <a href="https://www.roblox.com/games/6907295312/Your-Next-Stop">See : Your Next Stop</a>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<script src="tab.js"></script>
+
+</body>
+</html>
